@@ -16,6 +16,8 @@ function addNumbers(num1, num2) {
   return num1 + num2;
 }
 
+console.log(addNumbers(5,3));
+
 // ⭐️ Example Challenge end ⭐️
 
 
@@ -39,10 +41,9 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject = {
-  name: "Kaylen",
-
-};
+function makePersonObject(/* code here */) {
+  /* code here */
+}
 
 /**
  * ### Challenge `getName`
