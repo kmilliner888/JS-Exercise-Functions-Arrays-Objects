@@ -16,8 +16,8 @@ function addNumbers(num1, num2) {
   return num1 + num2;
 }
 
-console.log(addNumbers(5,3));
-console.log(addNumbers(2,4));
+// console.log(addNumbers(5,3));
+// console.log(addNumbers(2,4));
 
 // ⭐️ Example Challenge end ⭐️
 
@@ -42,11 +42,11 @@ console.log(addNumbers(2,4));
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(param1, param2, param3) {
+function makePersonObject(param1, param2, param3) { // Gave the function 3 parameters: param1, param2, param3
   return {id: param1, name: param2, email: param3}
 };
 
-console.log(makePersonObject(5, "Sally", "sally@gmail.com"));
+// console.log(makePersonObject(5, "Sally", "sally@gmail.com"));
 
 /**
  * ### Challenge `getName`
@@ -73,8 +73,8 @@ let testObject = {
   email: 'sally@gmail.com'
 }
 
-console.log(testObject.name);
-console.log(getName(testObject));
+// console.log(testObject.name);
+// console.log(getName(testObject));
 
 
 /**
@@ -90,15 +90,15 @@ console.log(getName(testObject));
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(name, num1, num2) {
-  return {
-    name: name, 
-    sumMethod: num1 + num2,
-    speak: `Hello, my name is ${name}`
+function makeSmartPerson(name) { // Gave function one parameter: name
+  return { //This says: return an object:
+    name: name, // name
+    sum: (num1, num2) =>  num1 + num2, // Using arrow syntax to say:    sum: function(argument1, argument2) { return argument1 + argument2}
+    speak: () => "Hello, my name is" + name
 };
 }
 
-console.log(makeSmartPerson('Sally', 2, 4));
+// console.log(makeSmartPerson('Sally', 2, 4));
 
 
 
@@ -171,14 +171,50 @@ var inventory = [
   { id: 11, car_make: "Infiniti", car_model: "G35", car_year: 2004 },
   { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
   { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
-  { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
+  { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 },
+  { id: 15, car_make: "Dodge", car_model: "Intrepid", car_year: 2000 },
+  { id: 16, car_make: "Mitsubishi", car_model: "Montero Sport", car_year: 2001 },
+  { id: 17, car_make: "Buick", car_model: "Skylark", car_year: 1987 },
+  { id: 18, car_make: "Geo", car_model: "Prizm", car_year: 1995 },
+  { id: 19, car_make: "Oldsmobile", car_model: "Bravada", car_year: 1994 },
+  { id: 20, car_make: "Mazda", car_model: "Familia", car_year: 1985 },
+  { id: 21, car_make: "Chevrolet", car_model: "Express 1500", car_year: 2003 },
+  { id: 22, car_make: "Jeep", car_model: "Wrangler", car_year: 1997 },
+  { id: 23, car_make: "Eagle", car_model: "Talon", car_year: 1992 },
+  { id: 24, car_make: "Toyota", car_model: "MR2", car_year: 2003 },
+  { id: 25, car_make: "BMW", car_model: "525", car_year: 2005 },
+  { id: 26, car_make: "Cadillac", car_model: "Escalade", car_year: 2005 },
+  { id: 27, car_make: "Infiniti", car_model: "Q", car_year: 2000 },
+  { id: 28, car_make: "Suzuki", car_model: "Aerio", car_year: 2005 },
+  { id: 29, car_make: "Mercury", car_model: "Topaz", car_year: 1993 },
+  { id: 30, car_make: "BMW", car_model: "6 Series", car_year: 2010 },
+  { id: 31, car_make: "Pontiac", car_model: "GTO", car_year: 1964 },
+  { id: 32, car_make: "Dodge", car_model: "Ram Van 3500", car_year: 1999 },
+  { id: 33, car_make: "Jeep", car_model: "Wrangler", car_year: 2011 },
+  { id: 34, car_make: "Ford", car_model: "Escort", car_year: 1991 },
+  { id: 35, car_make: "Chrysler", car_model: "300M", car_year: 2000 },
+  { id: 36, car_make: "Volvo", car_model: "XC70", car_year: 2003 },
+  { id: 37, car_make: "Oldsmobile", car_model: "LSS", car_year: 1997 },
+  { id: 38, car_make: "Toyota", car_model: "Camry", car_year: 1992 },
+  { id: 39, car_make: "Ford", car_model: "Econoline E250", car_year: 1998 },
+  { id: 40, car_make: "Lotus", car_model: "Evora", car_year: 2012 },
+  { id: 41, car_make: "Ford", car_model: "Mustang", car_year: 1965 },
+  { id: 42, car_make: "GMC", car_model: "Yukon", car_year: 1996 },
+  { id: 43, car_make: "Mercedes-Benz", car_model: "R-Class", car_year: 2009 },
+  { id: 44, car_make: "Audi", car_model: "Q7", car_year: 2012 },
+  { id: 45, car_make: "Audi", car_model: "TT", car_year: 2008 },
+  { id: 46, car_make: "Oldsmobile", car_model: "Ciera", car_year: 1995 },
+  { id: 47, car_make: "Volkswagen", car_model: "Jetta", car_year: 2007 },
+  { id: 48, car_make: "Dodge", car_model: "Magnum", car_year: 2008 },
+  { id: 49, car_make: "Chrysler", car_model: "Sebring", car_year: 1996 },
+  { id: 50, car_make: "Lincoln", car_model: "Town Car", car_year: 1999 }
 ]
 
 function getCarInfoByIndex(arr, index) {
   return `This is a ${arr[index].car_make} ${arr[index].car_model}`
 }
 
-console.log(getCarInfoByIndex(inventory, 0));
+// console.log(getCarInfoByIndex(inventory, 0));
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -191,11 +227,11 @@ console.log(getCarInfoByIndex(inventory, 0));
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo() {
+function getLastCarInfo(inventory) {
   let lastCar = inventory[inventory.length-1];
   return `This is a ${lastCar.car_make} ${lastCar.car_model}`;
 }
-console.log(getLastCarInfo());
+// console.log(getLastCarInfo());
 /**
  * ### Challenge `getCarInfoById`
  * 
@@ -208,16 +244,16 @@ console.log(getLastCarInfo());
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(array, id) {
-  for(let i=0; i<array.length; i++) {
-    if (array[i].id===id) {
-      return `This is a ${array[i].car_make} ${array[i].car_model}`
+function getCarInfoById(array, id) { // Gave the function two parameters: 'array' and 'id'
+  for(let i=0; i<array.length; i++) { // Created a 'for loop' to run over the given array's data
+    if (array[i].id===id) { // This says: If the given array's id at the specified index is equal to the id number in the argument, then:
+      return `This is a ${array[i].car_make} ${array[i].car_model}` // Return this statement 'This is a (array index #'s car_make) (array index #'s car_model)'
     }
   }
   /* code here */
 };
 
-console.log(getCarInfoById(inventory, 2));
+// console.log(getCarInfoById(inventory, 2)); // Prints outcome of the function after it runs with array argument (inventory array) and id argument (id: 2)
 /**
  * ### Challenge `sortCarInventory`
  * 
@@ -227,13 +263,23 @@ console.log(getCarInfoById(inventory, 2));
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(array) {
-  for(let i=0; i<array.length; i++) {
-    return array.sort(array.car_model);
+array.sort((a,b) => {
+  if(a.car_model < b.car_model) {
+    return -1;
   }
-  /* code here */
-}
+        else if(a.car_model > b.car_model) {
+          return 1;
+        }
+});
+return array;
+};
 
-console.log(sortCarInventory());
+console.log(sortCarInventory(inventory));
+
+
+
+
+// console.log(inventory.sort(sortCarInventory));
 
 /**
  * ### Challenge `getModelYears`
@@ -244,9 +290,14 @@ console.log(sortCarInventory());
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(array) { // Gave the function one parameter called 'array'
+  let yearArray=[]; //Made an empty array waiting for data to be added to it
+  for(let i=0; i<array.length; i++) { // Created a 'for loop' to run over the given array's data
+    yearArray.push(array[i].car_year); // PUSHED/ADDED the new data (array[i].car_year) into the new empty array (yearArray)
+  }
+  return yearArray; // Returned the new array now filled with the new data
 }
+// console.log(getModelYears(inventory)); // Prints the outcome of the function after it runs with one argument (the given array 'inventory'). Outcome: an array of car years
 
 /**
  * ### Challenge `getOlderCars`
@@ -260,9 +311,17 @@ function getModelYears(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
-}
+function getOlderCars(array, year) { // Gave the function two paramenters "array" and "year"
+  let oldCarsArray =[]; // Made an empty array waiting for data to be added to it
+  for(let i=0; i<array.length; i++) { // Created a 'for loop' to run over the given array's data
+    if (array[i].car_year <= year) {
+      oldCarsArray.push(array[i]); // This says: If an car year in the array is equal to or less than the year 2000, push those cars into the new empty array 'oldCarsArray' 
+    } 
+  }
+  return oldCarsArray; //return the new array OldCarsArray
+};
+
+// console.log(getOlderCars(inventory, 2000)); // Prints outcome of function after running the given array and year arguments
 
 /**
  * ### Challenge `getGermanCars`
@@ -275,9 +334,17 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
-}
+function getGermanCars(array) { //Gave function an array parameter
+  let germanCars= []; //Created new empty array waiting for data
+  for (let i=0; i<array.length; i++) { // Created a 'for loop' to run over the given array's data
+    if (array[i].car_make === "Audi" || array[i].car_make === "Mercedes-Benz" || array[i].car_make === "Volkswagen" || array[i].car_make === "BMW") { //if a car in the array has a car make of Audi, Mercedes-Benz, Volkswagon, or BMW, push those cars to new array germanCars
+      germanCars.push(array[i]);  // This says: if the car make in the array is equal to Audi or Mercedes-Benz or Volkwagon or BMW, then push those cars into the new empty array 'germanCars'
+  };
+};
+  return germanCars; // return new array germanCars
+};
+
+// console.log(getGermanCars(inventory)); // Prints outcome of function after running the given array argument
 
 /**
  * ### Challenge refactor to arrow functions
